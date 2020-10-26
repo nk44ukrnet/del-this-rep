@@ -2,16 +2,14 @@ let numberOfFilms;
 
 function start() {
     numberOfFilms = +prompt('How many films have you watched?', '');
-
     while(numberOfFilms == ''
     || numberOfFilms == null
     || isNaN(numberOfFilms)) {
     numberOfFilms = +prompt('How many films have you watched?', '');
-
     }
 }
 
-//start();
+start();
 
 const personalMovieDb = {
     count: numberOfFilms,
@@ -41,7 +39,7 @@ function rememberMyFilms() {
     }
 }
 
-//rememberMyFilms();
+rememberMyFilms();
 
 personalMovieDb.movies[q1] = q2;
 personalMovieDb.movies[q3] = q4;
@@ -60,7 +58,7 @@ function detectPersonalLevel() {
         console.log('There is an error with rating');
     }
 }
-//detectPersonalLevel();
+detectPersonalLevel();
 
 function showMyDb(hidden) {
     if(!hidden) {
