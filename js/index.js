@@ -16,7 +16,10 @@ const personalMovieDb = {
     movies: {},
     actors: {},
     genres: [],
-    privat: false
+    privat: false,
+    toggleVisibleMyDb(){
+        (this.privat === true) ? this.privat = false : this.privat = true;
+    }
 };
 
 let q1 = '',
@@ -63,6 +66,8 @@ detectPersonalLevel();
 function showMyDb(hidden) {
     if(!hidden) {
         console.log(personalMovieDb)
+    } else {
+        return;
     }
 }
 showMyDb(personalMovieDb.privat);
@@ -82,5 +87,5 @@ function writeYourGenres() {
 }
 writeYourGenres();
 
-console.log(personalMovieDb);
+ console.log(personalMovieDb);
 
